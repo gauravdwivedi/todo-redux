@@ -7,7 +7,7 @@ class App extends Component {
   handleOnChange=(e)=>{
      
     this.setState({task:[e.target.value]});
-    
+
   }
 
   handleClick=(e)=>{
@@ -34,7 +34,7 @@ class App extends Component {
         <input type="text" name="userInput"/>
         <button>Submit</button>
       </form>
-      {/* <List tasks={tasks}/> */}
+      <List tasks={tasks}/>
       </div>
           );
   }
