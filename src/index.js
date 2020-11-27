@@ -5,17 +5,19 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
-import {rootReducer} from './reducers';
+import rootReducer from './reducers';
 
 
 const store=createStore(rootReducer);
 
 ReactDOM.render(
-  <React.StrictMode>
     <Provider store={store}>
+
+  <React.StrictMode>
     <App />
-    </Provider>
-  </React.StrictMode>,
+    </React.StrictMode>,
+    </Provider>,
+
   document.getElementById('root')
 );
 

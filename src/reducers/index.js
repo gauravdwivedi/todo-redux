@@ -1,18 +1,9 @@
-import {ADD_TASK} from '../actions';
+import {combineReducers} from 'redux'
+import todo from './todo'
 
-const intitalState={
-    tasks:[],
-    value:'something'
-}
 
-export function rootReducer(state=intitalState,action){
-    switch (action.type){
-        case ADD_TASK:
-            return {
-                tasks:[...state.tasks,action.task]
-            }
-         
-        default:
-            return state;
-    }
-}
+const rootReducer = combineReducers({
+    todo
+})
+
+export default rootReducer
