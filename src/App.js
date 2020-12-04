@@ -23,26 +23,28 @@ class App extends Component {
 
   handleDelete=(task)=>{
     // use filter to filter out task from array
+    console.log('')
 
   }
   render() {
     console.log('Inside APP Component',this.props)
-    const {tasks} =this.props
+    console.log('renders')
     return (
       <div>
       <form onSubmit={(e)=>this.handleClick(e)}>
         <input type="text" name="userInput"/>
         <button>Submit</button>
       </form>
-      <List tasks={tasks}/>
+      <List />
       </div>
           );
   }
 }
 
 function mapStateToProps(state){
+  console.log('map state to props',state.todo.tasks)
   return {
-    tasks:state.tasks,
+    tasks:state.todo.tasks,
 
   }
 }

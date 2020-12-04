@@ -1,17 +1,30 @@
 import React from 'react'
+import {connect} from 'react-redux';
 
 
-function List(props) {
 
-    console.log("List Props",props)
+class List extends React.Component {
+
+
+     render(){
+       console.log('this List props', this.props)
+       const {tasks} = this.props
+     
     return (
         <ul>
-             { props.tasks.map((task,index)=>(
-                <li key={index}>{task}</li>
-            ))}
+            <div>{tasks.map((item)=>(<div>{item}</div>))}</div>
         </ul>
     )
 }
+}
 
 
-export default List
+function mapStateToProps(state){
+    console.log('Map State to props under List',state)
+    return {
+
+      tasks:state.todo.tasks,
+  
+    }
+  }
+export default connect(mapStateToProps)(List)

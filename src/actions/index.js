@@ -4,6 +4,7 @@ export const REMOVE_TASK='REMOVE_TASK'
 export const EDIT_TASK= 'EDIT_TASK'
 
 export function addtask(task){
+    console.log('Inside ass task action',task)
     return {
         type:ADD_TASK,
         task

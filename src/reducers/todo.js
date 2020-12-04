@@ -1,12 +1,13 @@
 import {ADD_TASK, REMOVE_TASK} from '../actions';
 
 const intitalState={
-    tasks:['Task one','Task two','Task three']
+    tasks:[]
 }
 
 export function todo(state=intitalState,action){
     switch (action.type){
         case ADD_TASK:
+
             console.log('Add task reducer called',state.tasks)
 
             return {
